@@ -1,0 +1,49 @@
+#LoginPage {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Outfit';
+  }
+  
+  #BackgroundBlur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./Components/Content/Images/img1.png');
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px);
+    z-index: -1;
+  }
+  
+  #LoginForm {
+    border: solid 2px black;
+    border-radius: 15px;
+    padding: 30px 40px;
+    box-shadow: 1px 1px 9px 1px black;
+    width: 30%;
+    background: white; /* Ensure the form has a solid background */
+    position: relative;
+  }
+  
+  #LoginText {
+    font-family: "Outfit";
+    font-weight: 700;
+  }
+  
+  .form-control {
+    width: 100%;
+  }
+  
+  .btn-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    transition: all ease-in-out 0.2s;
+  }
+  .btn-close:hover{
+    background-color: #090;
+  }

@@ -1,0 +1,137 @@
+/* Bio.css */
+body {
+  font-family: 'Outfit', sans-serif; /* Ensure the font is applied correctly */
+}
+
+.card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 300px; /* Set a fixed height for the image */
+  object-fit: scale-down; /* Ensure the image covers the container */
+  transition: transform 0.2s ease-in-out;
+  cursor: zoom-in;
+}
+
+.img-container {
+  overflow: hidden;
+  position: relative;
+  height: 300px; /* Match the height of the image */
+}
+
+.img-container img {
+  display: block;
+  width: 100%;
+  height: 100%; /* Match the height of the container */
+  transform-origin: center center;
+  transition: transform 0.2s ease-in-out; /* Smooth transition for zoom effect */
+}
+
+.img-container:hover img {
+  transform: scale(1.5); /* Adjust zoom level as needed */
+}
+
+.no-image-placeholder {
+  width: 100%;
+  height: 100%;
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-weight: 500;
+}
+
+#ButtonContainer {
+  display: flex;
+  justify-content: space-between; /* Space out buttons evenly */
+  align-items: center;
+}
+
+#ButtonContainer .btn {
+  flex: 1;
+  margin: 0 5px; /* Add space between buttons */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-custom-green {
+  background-color: #17ac3c; /* Light green color */
+  border-color: #17ac3c;
+  color: white;
+  font-weight: bold; /* Make button text bold */
+  display: flex;
+  align-items: center;
+  text-align: center; /* Center text within button */
+}
+
+.btn-custom-green i {
+  margin-right: 8px; /* Space between icon and text */
+}
+
+.btn-custom-green:hover {
+  color: white;
+  background-color: #228339; /* Slightly darker green for hover */
+  border-color: #228339;
+}
+
+.btn-custom-green:disabled {
+  background-color: #88c79a; /* Lighter green for disabled state */
+  border-color: #88c79a;
+  cursor: not-allowed;
+}
+
+.card-title, .card-text {
+  text-align: center;
+}
+
+.card-text {
+  font-weight: bold; /* Make price text bold */
+  font-size: 1.2rem; /* Slightly larger font size */
+}
+
+.stock-status {
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+}
+
+.in-stock {
+  color: #17ac3c; /* Green color for in-stock items */
+}
+
+.out-of-stock {
+  color: #dc3545; /* Red color for out-of-stock items */
+}
+
+#BioProductsContent h1 {
+  color: #17ac3c; /* Green color for heading to match the theme */
+  margin-bottom: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .img-container, .card-img-top {
+    height: 250px; /* Smaller height on mobile */
+  }
+  
+  #ButtonContainer {
+    flex-direction: column;
+  }
+  
+  #ButtonContainer .btn {
+    margin: 5px 0;
+    width: 100%;
+  }
+}

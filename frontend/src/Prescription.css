@@ -1,0 +1,61 @@
+/* Prescription.css */
+.prescription-page {
+    font-family: "Outfit", sans-serif;
+  }
+  
+  #page-container {
+    padding: 20px;
+    width: 50vw;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    color: #009900;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .prescription-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    border: 2px solid #009900; /* Add a green border */
+    border-radius: 8px; /* Optional: rounded corners */
+    background-color: #f9f9f9; /* Optional: light background color */
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .prescription-textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+  }
+  
+  .prescription-textarea:focus {
+    outline: none;
+    border-color: #009900;
+  }
+  
+  .prescription-button {
+    background-color: #009900;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+  }
+  
+  .prescription-button:hover {
+    background-color: #0ab80a;
+  }
+  

@@ -1,0 +1,164 @@
+/* General Page Styles */
+.contactus-page {
+    font-family: 'Outfit', sans-serif;
+    background-color: #ffffff;
+    padding: 0; /* Remove padding for the page */
+}
+
+/* Page Container Styles */
+.page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Contact Us Container */
+.contactus-container {
+    width: 80%;
+    max-width: 800px;
+    background-color: #f9f9f9;
+    border: 2px solid #009900; /* Border style inspired by Cart.css */
+    border-radius: 10px; /* Match border radius */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px; /* Increased padding for consistency */
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: #f9f9f9; /* Match background color */
+}
+
+.contactus-container h1 {
+    color: #009900;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.contactus-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.contactus-section {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-bottom: 1px solid #cccccc;
+    width: 100%;
+    text-align: left;
+}
+
+.contactus-section:last-child {
+    border-bottom: none;
+}
+
+.contactus-section h2 {
+    font-size: 1.5rem;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.contactus-section p {
+    font-size: 1rem;
+    color: #666666;
+}
+
+/* Feedback Container */
+.feedback-container {
+    width: 80%;
+    max-width: 800px;
+    background-color: #f9f9f9;
+    border: 2px solid #009900; /* Match border style */
+    border-radius: 10px; /* Match border radius */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px; /* Increased padding for consistency */
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: #f9f9f9; /* Match background color */
+}
+.feedback-container h1 {
+    color: #009900;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.feedback-textarea {
+    width: 90%;
+    height: 150px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    padding: 15px;
+    font-size: 1rem;
+    color: #333333;
+    resize: vertical;
+    margin-bottom: 30px;
+}
+
+.feedback-textarea:focus{
+    border: 1px solid #737373; /* Match border style */   
+    outline: none;
+}
+
+.feedback-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #009900; /* Match button color */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 0 auto; /* Center the button horizontally */
+    width: 40%; /* Adjust width to be similar to Cart button */
+    transition: background-color 0.3s;
+}
+
+.feedback-button:hover {
+    background-color: #0ab80a; /* Match hover color */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .contactus-container,
+    .feedback-container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .contactus-container h1,
+    .feedback-container h1 {
+        font-size: 2rem;
+    }
+
+    .feedback-textarea {
+        font-size: 0.9rem;
+    }
+}
+
+/* Address Icon Link */
+.address-icon-link {
+    color: #009900;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.address-icon {
+    color: #009900;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.address-icon-link:hover .address-icon {
+    color: #006600;
+}
+
+.contactus-info-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.contactus-info-item a{
+    margin-bottom: 15px;
+}

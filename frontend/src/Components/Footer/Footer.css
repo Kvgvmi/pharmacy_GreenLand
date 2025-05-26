@@ -1,0 +1,128 @@
+#Footer {
+  background-color: #444744;
+  color: white;
+  padding: 15px 0;
+  width: 100%;
+  height: max-content;
+  font-family: "Outfit";
+}
+
+#FooterText {
+  display: block;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+#FooterElements {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  padding: 45px 0px;
+}
+
+.FooterElements {
+  display: block;
+  align-items: center;
+  justify-content: baseline;
+}
+
+.FooterElements h3 {
+  margin: 0 0 15px 0;
+  font-size: 22px;
+}
+
+.FooterElements a {
+  color: white;
+  margin-bottom: 19px;
+  position: relative;
+  text-decoration: none;
+}
+
+.FooterElements a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2.6px;
+  bottom: -1px;
+  left: 0;
+  border-radius: 20px;
+  background-color: #009900;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.FooterElements a:hover::after {
+  visibility: visible;
+  width: 100%;
+}
+
+#Follow {
+  border: solid 1px white;
+  border-radius: 15px;
+  width: 250px;
+  padding: 20px 20px;
+  text-align: center;
+  background: linear-gradient(to right, #009900, #94fe94);
+  border: none;
+  font-family: "Outfit";
+}
+
+#Follow h3 {
+  margin: 0px;
+  font-family: 'Outfit';
+  font-size: larger;
+  font-weight: 600;
+}
+#Follow h4{
+  margin: 20px;
+  font-size: 17px;
+  font-weight: 600;
+}
+#hr {
+  margin: 2px auto;
+  width: 88%;
+  outline: none;
+  border: solid 1px rgb(255, 255, 255);
+}
+
+#Socials {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 10px;
+}
+
+#Socials a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid 2px white;
+  padding: 8px 10px;
+  border-radius: 10px;
+  width: 40px;
+  height: 40px;
+  transition: ease-in-out 0.3s;
+}
+
+#Socials a:hover {
+  background-color: white;
+}
+
+#Socials a:hover i {
+  color: black;
+}
+
+#Socials a i {
+  color: white;
+  transition: ease-in-out 0.3s;
+}
+
+#FooterCopyright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 15px;
+}

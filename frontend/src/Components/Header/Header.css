@@ -1,0 +1,205 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#Header {
+  font-family: "Outfit", sans-serif;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+  background-color: #f9f9f9;
+}
+
+#Logo {
+  display: flex;
+  align-items: center;
+  outline: none;
+}
+
+#Logo:focus {
+  outline: none;
+}
+
+#Logo img {
+  max-height: 60px;
+}
+
+#SearchBar {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 0 20px;
+}
+
+#SearchBarInput {
+  width: calc(100% - 40px); /* Adjust width to accommodate the button */
+  height: 40px;
+  padding: 0 10px;
+  font-size: 16px;
+  border-radius: 10px 0 0 10px;
+  border: none;
+  outline: none;
+  border: solid 2px #c1c1c1;
+}
+
+#buttonSearch {
+  width: 40px; /* Fixed width for the button */
+  height: 40px;
+  position: absolute;
+  right: 2px;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #009900;
+  border: none;
+  border-radius: 0 10px 10px 0;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+#SearchBarInput:focus {
+  border: solid 2px #009900;
+}
+
+#buttonSearch:hover {
+  background-color: #0ab80a;
+}
+
+#buttonSearch i {
+  color: white;
+  font-size: 18px;
+}
+
+/* Suggestions dropdown */
+.suggestions {
+  position: absolute;
+  background: white;
+  border: 1px solid #ddd;
+  width: 100%; /* Match width of SearchBar */
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  top: 100%; /* Position dropdown right below the input */
+  left: 0; /* Align left */
+}
+
+.suggestion-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.suggestion-item:hover {
+  background-color: #f0f0f0;
+}
+
+#ButtonsContainer {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+#ButtonsContainer a,
+#ButtonsContainer button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 5px;
+  text-decoration: none;
+  background: none;
+  border: none;
+  font-family: "Outfit", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  width: max-content; /* Ensures width fits content */
+}
+
+#ButtonsContainer a:hover,
+#ButtonsContainer button:hover {
+  background-color: #009900;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+#ButtonsContainer a i,
+#ButtonsContainer button i {
+  color: #009900;
+  font-size: 18px;
+}
+
+#ButtonsContainer a:hover i,
+#ButtonsContainer button:hover i {
+  color: white;
+}
+
+#ButtonsContainer a span,
+#ButtonsContainer button span {
+  margin-left: 10px; /* Add spacing between icon and text */
+}
+
+@media (max-width: 841px) {
+  #SearchBar {
+    display: none;
+  }
+}
+
+@media (max-width: 675px) {
+  #ButtonsContainer a span,
+  #ButtonsContainer button span {
+    display: none;
+  }
+  #ButtonsContainer a,
+  #ButtonsContainer button {
+    height: 40px;
+    width: 40px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  #ButtonsContainer a,
+  #ButtonsContainer button {
+    height: 35px;
+    width: 35px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 460px) {
+  #Logo img {
+    max-height: 50px;
+  }
+}
+
+@media (max-width: 410px) {
+  #Logo img {
+    max-height: 40px;
+  }
+}
+
+@media (max-width: 315px) {
+  #ButtonsContainer a,
+  #ButtonsContainer button {
+    height: 30px;
+    width: 30px;
+    font-size: 12px;
+  }
+}
+.loading-indicator {
+  position: absolute;
+  right: 0;
+  padding: 0 50px 0 0;
+  color: #007bff; /* Change this to match your theme */
+  font-weight: bold;
+}

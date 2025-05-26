@@ -1,0 +1,109 @@
+/* ProductPage.css */
+
+.product-page-container {
+    margin: 20px;
+  }
+  
+  .product-title {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .product-details-container {
+    border: 2px solid #009900; /* Border color */
+    border-radius: 8px; /* Rounded corners */
+    padding: 2rem; /* Padding around the container */
+    margin: 3rem 5rem 3rem 5rem;
+  }
+  
+  .product-row {
+    display: flex;
+    gap: 20px; /* Space between image and details */
+  }
+  
+  .product-image {
+    flex: 1;
+    display: flex;
+    align-items: center; /* Center the image vertically */
+  }
+  
+  .product-image img {
+    max-width: 100%;
+    height: auto; /* Make image responsive */
+    border-radius: 8px;
+    object-fit: cover; /* Ensures the image covers the container */
+  }
+  
+  .product-details {
+    flex: 2;
+    display: flex;
+    flex-direction: column; /* Arrange details vertically */
+    justify-content: space-between; /* Space between elements */
+  }
+  
+  .product-price {
+    margin-top: 10px;
+  }
+  
+  .quantity-container {
+    display: flex;
+    align-items: center;
+    margin-top: 15px; /* Increased margin for more spacing */
+  }
+  
+  .quantity-label {
+    margin-right: 15px; /* More space between label and input */
+  }
+  
+  .quantity-input {
+    width: 100%;
+    padding: 10px; /* Increased padding for better appearance */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .total-price-container {
+    display: flex;
+    align-items: center;
+    margin-top: 15px; /* Spacing above total price */
+  }
+  
+  .total-price-label {
+    margin-right: 15px; /* Space between label and total price */
+  }
+  
+  .total-price {
+    font-weight: bold; /* Bold total price for emphasis */
+  }
+  
+  .btn-custom-green {
+    background-color: #28a745;
+    border-color: #28a745;
+    color: white;
+    padding: 12px 24px; /* Increased padding for a larger button */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px; /* Margin on top for spacing */
+    width: 100%;
+  }
+  
+  .btn-custom-green i {
+    margin-right: 10px; /* Space between icon and text */
+  }
+  
+  .btn-custom-green:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .product-row {
+      flex-direction: column; /* Stack the image and details on smaller screens */
+    }
+  }
+  

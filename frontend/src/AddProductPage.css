@@ -1,0 +1,108 @@
+.add-product-page {
+  width: 50%;
+  margin: auto;
+}
+
+.add-product-page form {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-product-page label {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.add-product-page input,
+.add-product-page textarea,
+.add-product-page button {
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  width: 100%;
+}
+
+.category-container {
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.category-title {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.categories-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.category-checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 8px 12px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+  width: auto;
+}
+
+.category-checkbox input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+  cursor: pointer;
+  position: relative;
+  margin-bottom: 0;
+}
+
+.category-checkbox input[type="checkbox"]:checked {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.category-checkbox input[type="checkbox"]:checked::after {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.category-checkbox label {
+  cursor: pointer;
+}
+#addProduct{
+  background-color: #009900;
+  color: white;
+}
+#addProduct:hover{
+  background-color: #26c226;
+}
+#updateProduct{
+  background-color: #0066cc;
+  color: white;
+}
+#updateProduct:hover{
+  background-color: #3399ff;
+}
+#formAddProduct{
+  border: solid 2px #009900;
+  padding: 30px;
+  margin: 30px auto;
+  border-radius: 15px;
+}

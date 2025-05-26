@@ -1,0 +1,112 @@
+/* Account.css */
+#AccountContent {
+  padding: 20px;
+  font-family: "Outfit", sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+#AccountContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+
+#UserInfoContainer,
+#OrdersContainer {
+  border: 2px solid #009900;
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  margin: 20px 0;
+  background-color: #f9f9f9;
+}
+
+.UserInfoField {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.UserInfoField label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.UserInfoField input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.UserInfoField input:focus {
+  outline: none;
+  border-color: #009900;
+}
+
+.account-logout-btn {
+  width: 100%;
+  display: block;
+  margin: 30px auto 10px auto;
+  background-color: #df1b1b;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 16px;
+}
+
+.account-logout-btn:hover {
+  background-color: #990000;
+}
+
+.OrdersTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.OrdersTable th,
+.OrdersTable td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+.OrdersTable th {
+  background-color: #009900;
+  color: white;
+}
+
+.OrdersTable tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+#UserInfoContainer h1,
+#OrdersContainer h1 {
+  margin: 0 0 20px 0;
+  color: #009900;
+  text-align: center;
+}
+.admin-dashboard-btn {
+  width: 100%;
+  display: block;
+  margin: 30px auto 10px auto;
+  background-color: #009900;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 16px;
+}
+
+.admin-dashboard-btn:hover {
+  background-color: darkgreen; /* Darker green on hover */
+}

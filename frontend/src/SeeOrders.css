@@ -1,0 +1,47 @@
+#orders-page-container {
+    margin: 20px;
+    font-family: 'Outfit', sans-serif; /* Use your preferred font */
+  }
+  
+  #orders-page-title {
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    color: #090;
+    text-align: center;
+  }
+  
+  .orders-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .order-card {
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+    cursor: pointer;
+  }
+  
+  .order-card:hover {
+    transform: scale(1.03);
+  }
+  
+  .order-id {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  .order-user,
+  .order-price,
+  .order-date {
+    margin: 10px 0;
+    font-size: 1em;
+    color: #555;
+  }
+  
