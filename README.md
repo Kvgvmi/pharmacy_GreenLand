@@ -4,7 +4,7 @@ A full-stack e-commerce application for a pharmacy, built with Laravel (backend)
 
 ## Features
 
-- Product browsing by categories (Medicines, Supplements, Baby products)
+- Product browsing by categories (Medicines, Supplements, Bio, Baby products)
 - User authentication and registration
 - Shopping cart functionality
 - Order management system
