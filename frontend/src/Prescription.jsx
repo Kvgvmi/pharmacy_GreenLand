@@ -3,6 +3,7 @@ import Swal from "sweetalert2";
 import Header from "./Components/Header/Header";
 import NavBar from "./Components/NavBar/NavBar";
 import Footer from "./Components/Footer/Footer";
+import LoadingSpinner from "./Components/LoadingSpinner/LoadingSpinner.jsx";
 import axios from "axios";
 import Cookies from "js-cookie"; // Assuming you're using cookies for user authentication
 import "./Prescription.css"; // Import the CSS file for styling
@@ -12,6 +13,7 @@ import apiConfig from "./config/api"; // Import the API configuration
 function Prescription() {
   const [description, setDescription] = useState("");
   const [image, setImage] = useState(null);
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   const handleImageChange = (e) => {
@@ -29,10 +31,14 @@ function Prescription() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    
+    // Set loading to true when form is submitted
+    setLoading(true);
   
     const user = Cookies.get("user") || sessionStorage.getItem("user");
     
     if (!user) {
+      setLoading(false); // Stop loading if user is not logged in
       Swal.fire({
         title: "Error",
         text: "You must be logged in to submit a prescription.",
@@ -54,6 +60,7 @@ function Prescription() {
         icon: "error",
         confirmButtonColor: "#009900", // Match page theme
       });
+      setLoading(false); // Stop loading if image is missing
       return;
     }
   
@@ -89,6 +96,7 @@ function Prescription() {
             icon: "error",
             confirmButtonColor: "#009900"
           });
+          setLoading(false); // Stop loading if there's an error with the image
           return;
         }
       }
@@ -110,6 +118,7 @@ function Prescription() {
       );
   
       if (response.status === 201 || response.status === 200) {
+        setLoading(false); // Stop loading on success
         Swal.fire({
           title: "Success!",
           text: "Thank you for submitting your prescription, we will contact you soon!",
@@ -125,6 +134,7 @@ function Prescription() {
       }
     } catch (error) {
       console.error("Error submitting prescription:", error);
+      setLoading(false); // Stop loading on error
       
       // Extract and display more detailed error message
       let errorMessage = "There was an error submitting your prescription.";
@@ -149,6 +159,9 @@ function Prescription() {
       });
     }
   };  
+
+  // Show loading spinner when loading is true
+  if (loading) return <LoadingSpinner />;
 
   return (
     <div className="prescription-page">

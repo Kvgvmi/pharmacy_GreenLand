@@ -246,6 +246,11 @@ function Medicines() {
                     <p className="card-text text-center">
                       {product.PRICE_PRODUCT} DH
                     </p>
+                    {product.STOCK !== null && (
+                      <p className={`stock-status text-center ${product.STOCK > 0 ? 'in-stock' : 'out-of-stock'}`}>
+                        {product.STOCK > 0 ? `In Stock (${product.STOCK})` : 'Out of Stock'}
+                      </p>
+                    )}
                     <div id="ButtonContainer">
                       <button
                         className="btn btn-custom-green"

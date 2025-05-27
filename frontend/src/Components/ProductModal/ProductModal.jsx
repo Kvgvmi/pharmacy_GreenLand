@@ -29,7 +29,7 @@ const ProductModal = ({ product, onClose }) => {
     const value = e.target.value.replace(/[^0-9]/g, '');
     
     if (value === "") {
-      setQuantity(1); // Default to 1 if empty
+      setQuantity(""); // Allow empty temporarily while typing
       return;
     }
     
@@ -41,7 +41,13 @@ const ProductModal = ({ product, onClose }) => {
       setQuantity(numberValue);
     } else if (numberValue > maxStock) {
       setQuantity(maxStock);
-    } else {
+    }
+  };
+  
+  // Handle blur to ensure quantity is valid when input loses focus
+  const handleQuantityBlur = () => {
+    // If quantity is empty or less than 1, set it to 1
+    if (quantity === "" || quantity < 1) {
       setQuantity(1);
     }
   };
@@ -74,7 +80,7 @@ const ProductModal = ({ product, onClose }) => {
         await axios.post(apiConfig.endpoints.addToCart, {
           id_product: product.ID_PRODUCT,
           id_user: userId,
-          quantity_product: quantity,
+          quantity: quantity, // Use consistent parameter name across the application
         });
 
         // Show success alert using SweetAlert2
@@ -142,8 +148,8 @@ const ProductModal = ({ product, onClose }) => {
                   max={product.STOCK_PRODUCT || 100}
                   value={quantity}
                   onChange={handleQuantityChange}
+                  onBlur={handleQuantityBlur}
                   className="quantity-input"
-                  readOnly={false}
                 />
                 <button 
                   type="button" 

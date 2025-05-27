@@ -194,7 +194,7 @@ function Bio() {
                       {product.NAME_PRODUCT}
                     </h5>
                     <p className="card-text text-center">
-                      ${product.PRICE_PRODUCT}
+                      {product.PRICE_PRODUCT} DH
                     </p>
                     {product.STOCK !== null && (
                       <p className={`stock-status text-center ${product.STOCK > 0 ? 'in-stock' : 'out-of-stock'}`}>

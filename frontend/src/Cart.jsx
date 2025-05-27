@@ -311,12 +311,6 @@ function Cart() {
             <div className="cart-total">
               <h2>Total Price: {totalPrice} DH</h2>
               <div className="cart-buttons-container">
-                <button
-                  className="order-button"
-                  onClick={handleUpdateQuantities}
-                >
-                  Update quantities
-                </button>
                 <button className="order-button" onClick={handleOrder}>
                   Order
                 </button>
