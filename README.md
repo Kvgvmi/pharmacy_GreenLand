@@ -11,7 +11,6 @@ A full-stack e-commerce application for a pharmacy, built with Laravel (backend)
 - Prescription upload system
 - Admin dashboard for product and order management
 
-## Technology Stack
 
 ### Frontend
 - React.js
@@ -90,14 +89,7 @@ The project is organized into two main directories:
 - Orders: `/api/orders`
 - User Authentication: `/api/login`, `/api/register`
 
-## Screenshots
-
-*Screenshots will be added soon*
-
 ## Contributors
 
 - [Kvgvmi](https://github.com/Kvgvmi) - Developer
 
-## License
-
-This project is licensed under the MIT License.
